@@ -10,7 +10,7 @@
         <title>Sand</title>
         <link>https://searene.github.io/sand/</link>
         <description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description>
-        <generator>Hugo 0.101.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.115.3 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Tue, 18 Jul 2023 22:07:39 &#43;0800</lastBuildDate>
+        <lastBuildDate>Tue, 18 Jul 2023 22:21:44 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://searene.github.io/sand/rss.xml" />
         
