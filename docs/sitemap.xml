@@ -2,9 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sand256.xyz/categories/</loc>
+    <loc>https://sand256.xyz/posts/find-the-majority-element-using-the-boyer-moore-majority-voting-algorithm/</loc>
+    <lastmod>2023-07-18T21:58:00+08:00</lastmod>
+  </url><url>
+    <loc>https://sand256.xyz/posts/</loc>
+    <lastmod>2023-07-18T21:58:00+08:00</lastmod>
   </url><url>
     <loc>https://sand256.xyz/</loc>
+    <lastmod>2023-07-18T21:58:00+08:00</lastmod>
+  </url><url>
+    <loc>https://sand256.xyz/about/</loc>
+    <lastmod>2023-07-16T21:50:37+08:00</lastmod>
+  </url><url>
+    <loc>https://sand256.xyz/categories/</loc>
   </url><url>
     <loc>https://sand256.xyz/tags/</loc>
   </url>
