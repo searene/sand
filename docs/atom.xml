@@ -4,13 +4,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sand</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2023-07-19T21:57:06&#43;08:00</updated>
-    <id>https://searene.github.io/sand/</id>
-    <link rel="alternate" type="text/html" href="https://searene.github.io/sand/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://searene.github.io/sand/atom.xml" />
+    <updated>2023-07-19T22:07:00&#43;08:00</updated>
+    <id>https://sand256.xyz/</id>
+    <link rel="alternate" type="text/html" href="https://sand256.xyz/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://sand256.xyz/atom.xml" />
     <author>
             <name>Joey</name>
-            <uri>https://searene.github.io/sand</uri>
+            <uri>https://sand256.xyz</uri>
             
                 <email>mycityofsky@gmail.com</email>
             </author>

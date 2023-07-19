@@ -1,7 +1,7 @@
 ##########################################
 # Site Settings
 
-baseURL = "https://searene.github.io/sand"
+baseURL = "https://sand256.xyz"
 title = "Sand"
 languageCode = "en"
 hasCJKLanguage = false
