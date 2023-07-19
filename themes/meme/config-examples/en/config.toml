@@ -653,7 +653,7 @@ uglyURLs = false
     # Note: render only in production
     #       environment
 
-    enableComments = true
+    enableComments = false
     # Note: *global settings*
     #       `comments` in post’s Front Matter
     #       has a higher priority than here
@@ -662,8 +662,8 @@ uglyURLs = false
     autoLoadComments = false
 
     ## Disqus
-    enableDisqus = true
-    disqusShortname = "sand-5"
+    enableDisqus = false
+    disqusShortname = ""
 
     ## Valine
     enableValine = false
@@ -744,12 +744,12 @@ uglyURLs = false
     # Note: render only in production
     #       environment
 
-    enableGoogleAnalytics = true
+    enableGoogleAnalytics = false
 
     trackingCodeType = "gtag"
     # Note: gtag or analytics
 
-    trackingID = "G-YZ5Z4JQ8TK"
+    trackingID = ""
 
 
     ######################################

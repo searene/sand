@@ -650,11 +650,11 @@ uglyURLs = false
     #       has a higher priority than here
 
     # directly load the comments after pages loaded
-    autoLoadComments = false
+    autoLoadComments = true
 
     ## Disqus
-    enableDisqus = false
-    disqusShortname = ""
+    enableDisqus = true
+    disqusShortname = "sand-5"
 
     ## Valine
     enableValine = false
@@ -735,12 +735,12 @@ uglyURLs = false
     # Note: render only in production
     #       environment
 
-    enableGoogleAnalytics = false
+    enableGoogleAnalytics = true
 
     trackingCodeType = "gtag"
     # Note: gtag or analytics
 
-    trackingID = ""
+    trackingID = "G-YZ5Z4JQ8TK"
 
 
     ######################################
