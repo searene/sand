@@ -662,8 +662,8 @@ uglyURLs = false
     autoLoadComments = false
 
     ## Disqus
-    enableDisqus = false
-    disqusShortname = ""
+    enableDisqus = true
+    disqusShortname = "sand-5"
 
     ## Valine
     enableValine = false
