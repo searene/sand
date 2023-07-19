@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Wed, 19 Jul 2023 22:16:58 &#43;0800</lastBuildDate>
+        <lastBuildDate>Thu, 20 Jul 2023 07:37:59 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://sand256.xyz/rss.xml" />
         
@@ -66,7 +66,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;the-boyer-moore-majority-voting-algorithm&#34;&gt;The Boyer-Moore Majority Voting Algorithm&lt;/h1&gt;
-&lt;p&gt;There are a lot of ways to solve the problem, but the method I’ll introduce today would be the most efficient one, its time complexity is $O(n)$, and space complexity is $O(1)$. It’s called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;. The code of the algorithm is pretty easy, although it’s not that easy to prove its correctness. Unlike before, I’ll show the code first, walk through the process and prove its correctness later. I think you will better understand the algorithm this way.&lt;/p&gt;
+&lt;p&gt;There are a lot of ways to solve the problem, but the method I’ll introduce today would be the most efficient one, its time complexity is $O(n)$, and space complexity is $O(1)$. It’s called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;. The code of the algorithm is pretty easy, although it’s not that easy to prove its correctness. Unlike before, I’ll show the code first, then walk through the process and prove its correctness later. I think you will better understand the algorithm this way.&lt;/p&gt;
 &lt;p&gt;As promised, this is the code, written in Java&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -125,7 +125,7 @@
 &lt;/ol&gt;
 &lt;p&gt;In the end, we return &lt;code&gt;element&lt;/code&gt; 3, which is the correct majority number.&lt;/p&gt;
 &lt;h1 id=&#34;intuition&#34;&gt;Intuition&lt;/h1&gt;
-&lt;p&gt;The intuition behind the algorithm is that &lt;code&gt;count&lt;/code&gt; can be taken as a vote for &lt;code&gt;element&lt;/code&gt;. When we encounter a different value from &lt;code&gt;element&lt;/code&gt;, we decrease the vote, when we encounter the same value as &lt;code&gt;element&lt;/code&gt;, we increase the vote, so in the end, the majority number will have the most votes and win the contest.&lt;/p&gt;
+&lt;p&gt;The intuition behind the algorithm is that &lt;code&gt;count&lt;/code&gt; can be taken as a vote for &lt;code&gt;element&lt;/code&gt;. When we encounter a different value from &lt;code&gt;element&lt;/code&gt;, we decrease the vote, when we encounter the same value as &lt;code&gt;element&lt;/code&gt;, we increase the vote, so in the end, the majority number will have the most votes and therefore win the contest.&lt;/p&gt;
 &lt;h1 id=&#34;proof&#34;&gt;Proof&lt;/h1&gt;
 &lt;p&gt;The above intuition is just helping you understand the problem, to prove its correctness, you need mathematical induction.&lt;/p&gt;
 &lt;ol&gt;

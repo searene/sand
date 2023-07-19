@@ -1,7 +1,6 @@
 ---
 title: "Find the Majority Element Using the Boyer-Moore Majority Voting Algorithm"
 date: 2023-07-18T07:03:22+08:00
-draft: true
 ---
 
 # Introduction
@@ -30,7 +29,7 @@ Output: 2
 
 # The Boyer-Moore Majority Voting Algorithm
 
-There are a lot of ways to solve the problem, but the method I’ll introduce today would be the most efficient one, its time complexity is $O(n)$, and space complexity is $O(1)$. It’s called **the Boyer-Moore Majority Voting Algorithm**. The code of the algorithm is pretty easy, although it’s not that easy to prove its correctness. Unlike before, I’ll show the code first, walk through the process and prove its correctness later. I think you will better understand the algorithm this way.
+There are a lot of ways to solve the problem, but the method I’ll introduce today would be the most efficient one, its time complexity is $O(n)$, and space complexity is $O(1)$. It’s called **the Boyer-Moore Majority Voting Algorithm**. The code of the algorithm is pretty easy, although it’s not that easy to prove its correctness. Unlike before, I’ll show the code first, then walk through the process and prove its correctness later. I think you will better understand the algorithm this way.
 
 As promised, this is the code, written in Java
 
@@ -74,7 +73,7 @@ In the end, we return `element` 3, which is the correct majority number.
 
 # Intuition
 
-The intuition behind the algorithm is that `count` can be taken as a vote for `element`. When we encounter a different value from `element`, we decrease the vote, when we encounter the same value as `element`, we increase the vote, so in the end, the majority number will have the most votes and win the contest.
+The intuition behind the algorithm is that `count` can be taken as a vote for `element`. When we encounter a different value from `element`, we decrease the vote, when we encounter the same value as `element`, we increase the vote, so in the end, the majority number will have the most votes and therefore win the contest.
 
 # Proof
 
