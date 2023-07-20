@@ -98,17 +98,17 @@ uglyURLs = false
 # Author’s information
 [author]
     # Name
-    name = "Joey"
+    name = "reuixiy"
     # Email
-    email = "mycityofsky@gmail.com"
+    email = "reuixiy@gmail.com"
     # Motto or introduction
-    # motto = "Viva La Vida"
+    motto = "Viva La Vida"
     # Avatar
     avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
-    website = "https://sand256.xyz/"
+    website = "https://io-oi.me/"
     # Twitter
-    # twitter = "reuixiy"
+    twitter = "reuixiy"
 
 # Related content
 [related]
