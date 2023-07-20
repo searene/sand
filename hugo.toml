@@ -109,7 +109,7 @@ uglyURLs = false
     # Avatar
     avatar = "/icons/apple-touch-icon.png"
     # Personal website, default: baseURL
-    website = "https://io-oi.me/"
+    website = "https://sand256.xyz/"
     # Twitter
     # twitter = "reuixiy"
 
@@ -358,7 +358,7 @@ uglyURLs = false
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "reuixiy"
+    # siteTwitter = "reuixiy"
     # Note: used for Twitter Cards
 
 
