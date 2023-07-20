@@ -653,7 +653,7 @@ uglyURLs = false
     autoLoadComments = false
 
     ## Disqus
-    enableDisqus = true
+    enableDisqus = false
     disqusShortname = "sand-5"
 
     ## Valine
@@ -678,7 +678,7 @@ uglyURLs = false
     # Note: https://valine.js.org/
 
     ## Utterances
-    enableUtterances = false
+    enableUtterances = true
     utterancesRepo = "searene/sand"
     utterancesIssueTerm = "pathname"
     utterancesTheme = "github-light"
