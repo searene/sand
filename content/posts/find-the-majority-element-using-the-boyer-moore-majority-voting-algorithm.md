@@ -113,11 +113,11 @@ But how to prove that? We can use the following logic: Since `count` drops to 0 
 
 $$(c - \frac{k}{2}) \cdot 2 > n - k \label{1} \tag{1}$$
 
-That is equivalent to
+Which is equivalent to
 
 $$2c - k > n - k$$
 
-That is equivalent to
+Which is equivalent to
 
 $$2c > n$$
 

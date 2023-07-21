@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sand</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2023-07-21T08:30:27&#43;08:00</updated>
+    <updated>2023-07-21T08:50:15&#43;08:00</updated>
     <id>https://sand256.xyz/</id>
     <link rel="alternate" type="text/html" href="https://sand256.xyz/" />
     <link rel="self" type="application/atom&#43;xml" href="https://sand256.xyz/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">Find the Majority Element Using the Boyer-Moore Majority Voting Algorithm</title>
             <link rel="alternate" type="text/html" href="https://sand256.xyz/posts/find-the-majority-element-using-the-boyer-moore-majority-voting-algorithm/" />
             <id>https://sand256.xyz/posts/find-the-majority-element-using-the-boyer-moore-majority-voting-algorithm/</id>
-            <updated>2023-07-20T23:05:44&#43;08:00</updated>
+            <updated>2023-07-21T08:42:15&#43;08:00</updated>
             <published>2023-07-18T07:03:22&#43;08:00</published>
             <author>
                     <name>Joey</name>
@@ -151,9 +151,9 @@
 &lt;p&gt;We need to prove that $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is $n$.&lt;/p&gt;
 &lt;p&gt;But how to prove that? We can use the following logic: Since &lt;code&gt;count&lt;/code&gt; drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove&lt;/p&gt;
 &lt;p&gt;$$(c - \frac{k}{2}) \cdot 2 &amp;gt; n - k \label{1} \tag{1}$$&lt;/p&gt;
-&lt;p&gt;That is equivalent to&lt;/p&gt;
+&lt;p&gt;Which is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2c - k &amp;gt; n - k$$&lt;/p&gt;
-&lt;p&gt;That is equivalent to&lt;/p&gt;
+&lt;p&gt;Which is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
 &lt;p&gt;That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds. Following the previous logic, we know that it means the algorithm works when the first number is the majority.&lt;/p&gt;
 &lt;h2 id=&#34;when-the-first-number-is-not-the-majority&#34;&gt;When the first number is not the majority&lt;/h2&gt;
