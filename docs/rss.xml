@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Thu, 20 Jul 2023 08:22:07 &#43;0800</lastBuildDate>
+        <lastBuildDate>Fri, 21 Jul 2023 08:30:27 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://sand256.xyz/rss.xml" />
         
@@ -129,8 +129,8 @@
 &lt;h1 id=&#34;proof&#34;&gt;Proof&lt;/h1&gt;
 &lt;p&gt;The above intuition is just helping you understand the problem, to prove its correctness, you need mathematical induction.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;First, we assume that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is 1, which is obvious.&lt;/li&gt;
-&lt;li&gt;Second, we assume that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than n, we are going to prove its correctness when &lt;code&gt;nums&lt;/code&gt; length is n.&lt;/li&gt;
+&lt;li&gt;First, we prove that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is 1, which is obvious.&lt;/li&gt;
+&lt;li&gt;Second, we assume that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than &lt;code&gt;n&lt;/code&gt;, we are going to prove its correctness when &lt;code&gt;nums&lt;/code&gt; length is &lt;code&gt;n&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;To prove the second statement, we need to discuss two conditions:&lt;/p&gt;
 &lt;ol&gt;
@@ -138,14 +138,14 @@
 &lt;li&gt;The first number is not the majority.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;when-the-first-number-is-the-majority&#34;&gt;When the first number is the majority&lt;/h2&gt;
-&lt;p&gt;In the first iteration, &lt;code&gt;element&lt;/code&gt; is the majority number, and &lt;code&gt;count&lt;/code&gt; is 1. There are also two possibilities for the &lt;code&gt;count&lt;/code&gt; value:&lt;/p&gt;
+&lt;p&gt;In the first iteration, &lt;code&gt;element&lt;/code&gt; is the majority number, and &lt;code&gt;count&lt;/code&gt; is 1. There are also two possibilities for the &lt;code&gt;count&lt;/code&gt; value afterwards:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;It never drops to 0.&lt;/li&gt;
 &lt;li&gt;it drops to 0 in some iteration.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;For the former case, &lt;code&gt;element&lt;/code&gt; will always be the majority number, and the return value is also the majority, so the algorithm works in this case. We will discuss the latter case in more detail. Before doing that, let&amp;rsquo;s first define some variables to help illustrate the point:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;$k$: &lt;code&gt;count&lt;/code&gt; drops to 0 after the $k$-th iteration.&lt;/li&gt;
+&lt;li&gt;$k$: &lt;code&gt;count&lt;/code&gt; drops to 0 at the end of the $k$-th iteration.&lt;/li&gt;
 &lt;li&gt;$n$: The length of &lt;code&gt;nums&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;$m$: The majority number in &lt;code&gt;nums&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;$c$: The number of $m$ in &lt;code&gt;nums&lt;/code&gt;.&lt;/li&gt;
@@ -158,9 +158,15 @@
 &lt;li&gt;$c = 4$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We need to prove that $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is $n$.&lt;/p&gt;
-&lt;p&gt;But how to prove that? We can use the following logic: Since &lt;code&gt;count&lt;/code&gt; drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove $(c - \frac{k}{2}) \cdot 2 &amp;gt; n - k$, which is equivalent to $2c - k &amp;gt; n - k$. After adding $k$ at both sides of the equation, we get $2c &amp;gt; n$, which is true by the definition of $m$, the proof is done. So we know that the algorithm works correctly when the first number is the majority.&lt;/p&gt;
+&lt;p&gt;But how to prove that? We can use the following logic: Since &lt;code&gt;count&lt;/code&gt; drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove&lt;/p&gt;
+&lt;p&gt;$$(c - \frac{k}{2}) \cdot 2 &amp;gt; n - k \label{1} \tag{1}$$&lt;/p&gt;
+&lt;p&gt;That is equivalent to&lt;/p&gt;
+&lt;p&gt;$$2c - k &amp;gt; n - k$$&lt;/p&gt;
+&lt;p&gt;That is equivalent to&lt;/p&gt;
+&lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
+&lt;p&gt;That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds. Following the previous logic, we know that it means the algorithm works when the first number is the majority.&lt;/p&gt;
 &lt;h2 id=&#34;when-the-first-number-is-not-the-majority&#34;&gt;When the first number is not the majority&lt;/h2&gt;
-&lt;p&gt;Suppose the first number is $j$. Since $j$ is not the majority number, there has to be an iteration where &lt;code&gt;count&lt;/code&gt; for $j$ becomes 0 for the first time, let’s say it happens after the $k$-th iteration. As before, We define the following variables:&lt;/p&gt;
+&lt;p&gt;Suppose the first number is $j$. Since $j$ is not the majority number, there has to be an iteration where &lt;code&gt;count&lt;/code&gt; for $j$ becomes 0 for the first time, let’s say it happens at the end of the $k$-th iteration. As before, We define the following variables:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;$n$: The length of &lt;code&gt;nums&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;$m$: The majority number in &lt;code&gt;nums&lt;/code&gt;.&lt;/li&gt;
@@ -168,15 +174,15 @@
 &lt;li&gt;$a$: The number of $m$ in the first $k$ numbers.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;As before, we need to prove that $m$ is also the majority number in the remaining $n - k$ numbers, if we can do that, we will know that algorithm works when the first number is not the majority. Proving it is equal to proving the following equation:&lt;/p&gt;
-&lt;p&gt;$$2 \cdot (c - a) &amp;gt; n - k$$&lt;/p&gt;
-&lt;p&gt;To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a &amp;gt; \frac{k}{2}$, then &lt;code&gt;count&lt;/code&gt; would be greater than 0 after the $k$-th iteration. Also, notice that we have $2c &amp;gt; n$ by the definition of $m$. Now we have two equations, let&amp;rsquo;s write them here:&lt;/p&gt;
-&lt;p&gt;$$2a &amp;lt;= k$$&lt;/p&gt;
+&lt;p&gt;$$2 \cdot (c - a) &amp;gt; n - k \label{2} \tag{2}$$&lt;/p&gt;
+&lt;p&gt;To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a &amp;gt; \frac{k}{2}$, then &lt;code&gt;count&lt;/code&gt; would be greater than 0 at the end of the $k$-th iteration. Also, notice that we have $2c &amp;gt; n$ by the definition of $m$. Now we have two equations, let&amp;rsquo;s write them here:&lt;/p&gt;
+&lt;p&gt;$$a \le \frac{k}{2}$$&lt;/p&gt;
 &lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
-&lt;p&gt;Let the second equation minus the first one, we get&lt;/p&gt;
+&lt;p&gt;Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add this equation to $2c &amp;gt;n$, after that we get&lt;/p&gt;
 &lt;p&gt;$$2c - 2a &amp;gt; n - k$$&lt;/p&gt;
 &lt;p&gt;That is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2 \cdot (c - a) &amp;gt; n - k$$&lt;/p&gt;
-&lt;p&gt;$c - a$ is the number of $m$ in the remaining $n - k$ numbers, so $2 \cdot (c - a) &amp;gt; n - k$ means $m$ is also the majority number in the remaining $n - k$ numbers. So the algorithm works when the first number is not the majority. The proof is done.&lt;/p&gt;
+&lt;p&gt;Yes, that&amp;rsquo;s equation $\eqref{2}$, and we proved it. Following the previous logic, proving it means that the algorithm works when the first number is not the majority.&lt;/p&gt;
 &lt;h2 id=&#34;put-everything-together&#34;&gt;Put everything together&lt;/h2&gt;
 &lt;p&gt;In conclusion, we know that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is $n$. From the mathematical induction given before, we know that the algorithm works for any &lt;code&gt;nums&lt;/code&gt; that have a majority. Q.E.D.&lt;/p&gt;
 </description>

@@ -79,8 +79,8 @@ The intuition behind the algorithm is that `count` can be taken as a vote for `e
 
 The above intuition is just helping you understand the problem, to prove its correctness, you need mathematical induction.
 
-1. First, we assume that the algorithm works when `nums` length is 1, which is obvious.
-2. Second, we assume that the algorithm works when `nums` length is less than n, we are going to prove its correctness when `nums` length is n.
+1. First, we prove that the algorithm works when `nums` length is 1, which is obvious.
+2. Second, we assume that the algorithm works when `nums` length is less than `n`, we are going to prove its correctness when `nums` length is `n`.
 
 To prove the second statement, we need to discuss two conditions:
 
@@ -89,14 +89,13 @@ To prove the second statement, we need to discuss two conditions:
 
 ## When the first number is the majority
 
-In the first iteration, `element` is the majority number, and `count` is 1. There are also two possibilities for the `count` value:
-
+In the first iteration, `element` is the majority number, and `count` is 1. There are also two possibilities for the `count` value afterwards:
 1. It never drops to 0.
 2. it drops to 0 in some iteration.
 
 For the former case, `element` will always be the majority number, and the return value is also the majority, so the algorithm works in this case. We will discuss the latter case in more detail. Before doing that, let's first define some variables to help illustrate the point:
 
-1. $k$: `count` drops to 0 after the $k$-th iteration.
+1. $k$: `count` drops to 0 at the end of the $k$-th iteration.
 2. $n$: The length of `nums`.
 3. $m$: The majority number in `nums`.
 4. $c$: The number of $m$ in `nums`.
@@ -110,11 +109,23 @@ For example, when `nums = [2, 2, 3, 3, 5, 2, 2]`, the values of those variables 
 
 We need to prove that $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when `nums` length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works when `nums` length is $n$.
 
-But how to prove that? We can use the following logic: Since `count` drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove $(c - \frac{k}{2}) \cdot 2 > n - k$, which is equivalent to $2c - k > n - k$. After adding $k$ at both sides of the equation, we get $2c > n$, which is true by the definition of $m$, the proof is done. So we know that the algorithm works correctly when the first number is the majority.
+But how to prove that? We can use the following logic: Since `count` drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove
+
+$$(c - \frac{k}{2}) \cdot 2 > n - k \label{1} \tag{1}$$
+
+That is equivalent to
+
+$$2c - k > n - k$$
+
+That is equivalent to
+
+$$2c > n$$
+
+That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds. Following the previous logic, we know that it means the algorithm works when the first number is the majority.
 
 ## When the first number is not the majority
 
-Suppose the first number is $j$. Since $j$ is not the majority number, there has to be an iteration where `count` for $j$ becomes 0 for the first time, let’s say it happens after the $k$-th iteration. As before, We define the following variables:
+Suppose the first number is $j$. Since $j$ is not the majority number, there has to be an iteration where `count` for $j$ becomes 0 for the first time, let’s say it happens at the end of the $k$-th iteration. As before, We define the following variables:
 
 1. $n$: The length of `nums`.
 2. $m$: The majority number in `nums`.
@@ -123,15 +134,15 @@ Suppose the first number is $j$. Since $j$ is not the majority number, there has
 
 As before, we need to prove that $m$ is also the majority number in the remaining $n - k$ numbers, if we can do that, we will know that algorithm works when the first number is not the majority. Proving it is equal to proving the following equation:
 
-$$2 \cdot (c - a) > n - k$$
+$$2 \cdot (c - a) > n - k \label{2} \tag{2}$$
 
-To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a > \frac{k}{2}$, then `count` would be greater than 0 after the $k$-th iteration. Also, notice that we have $2c > n$ by the definition of $m$. Now we have two equations, let's write them here:
+To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a > \frac{k}{2}$, then `count` would be greater than 0 at the end of the $k$-th iteration. Also, notice that we have $2c > n$ by the definition of $m$. Now we have two equations, let's write them here:
 
-$$2a <= k$$
+$$a \le \frac{k}{2}$$
 
 $$2c > n$$
 
-Let the second equation minus the first one, we get
+Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add this equation to $2c >n$, after that we get
 
 $$2c - 2a > n - k$$
 
@@ -139,7 +150,7 @@ That is equivalent to
 
 $$2 \cdot (c - a) > n - k$$
 
-$c - a$ is the number of $m$ in the remaining $n - k$ numbers, so $2 \cdot (c - a) > n - k$ means $m$ is also the majority number in the remaining $n - k$ numbers. So the algorithm works when the first number is not the majority. The proof is done.
+Yes, that's equation $\eqref{2}$, and we proved it. Following the previous logic, proving it means that the algorithm works when the first number is not the majority.
 
 ## Put everything together
 
