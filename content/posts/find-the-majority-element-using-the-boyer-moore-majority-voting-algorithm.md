@@ -107,7 +107,7 @@ For example, when `nums = [2, 2, 3, 3, 5, 2, 2]`, the values of those variables 
 - $m = 2$
 - $c = 4$
 
-We need to prove that $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when `nums` length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works when `nums` length is $n$.
+We need to prove that in this case $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when `nums` length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works in this case.
 
 But how to prove that? We can use the following logic: Since `count` drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove
 
@@ -121,7 +121,7 @@ Which is equivalent to
 
 $$2c > n$$
 
-That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds. Following the previous logic, we know that it means the algorithm works when the first number is the majority.
+That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds, which means $m$ is the majority number in the remaining $n - k$ numbers. Following the previous logic said above, we know that the algorithm works when the first number is the majority.
 
 ## When the first number is not the majority
 

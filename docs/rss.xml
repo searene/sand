@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Fri, 21 Jul 2023 08:50:15 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 22 Jul 2023 06:11:38 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://sand256.xyz/rss.xml" />
         
@@ -157,14 +157,14 @@
 &lt;li&gt;$m = 2$&lt;/li&gt;
 &lt;li&gt;$c = 4$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;We need to prove that $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is $n$.&lt;/p&gt;
+&lt;p&gt;We need to prove that in this case $m$ is also the majority number in the remaining $n - k$ numbers. To see the necessity of the proof you need to remember that we have an assumption that the algorithm works when &lt;code&gt;nums&lt;/code&gt; length is less than $n$. So if $m$ is the majority number in the remaining $n - k$ numbers, the algorithm will correctly output the majority number $m$ after the remaining $n - k$ iterations, which means the algorithm will output $m$ after the whole $n$ iterations, which means the algorithm works in this case.&lt;/p&gt;
 &lt;p&gt;But how to prove that? We can use the following logic: Since &lt;code&gt;count&lt;/code&gt; drops to 0 in the $k$-th iteration and the first number is $m$, we know that the number of $m$ in the first $k$ numbers is exactly $\frac{k}{2}$. To prove $m$ is also the majority in the remaining $n - k$ numbers, we need to prove&lt;/p&gt;
 &lt;p&gt;$$(c - \frac{k}{2}) \cdot 2 &amp;gt; n - k \label{1} \tag{1}$$&lt;/p&gt;
 &lt;p&gt;Which is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2c - k &amp;gt; n - k$$&lt;/p&gt;
 &lt;p&gt;Which is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
-&lt;p&gt;That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds. Following the previous logic, we know that it means the algorithm works when the first number is the majority.&lt;/p&gt;
+&lt;p&gt;That is true by the definition of $m$. So we know that the equation $\eqref{1}$ holds, which means $m$ is the majority number in the remaining $n - k$ numbers. Following the previous logic said above, we know that the algorithm works when the first number is the majority.&lt;/p&gt;
 &lt;h2 id=&#34;when-the-first-number-is-not-the-majority&#34;&gt;When the first number is not the majority&lt;/h2&gt;
 &lt;p&gt;Suppose the first number is $j$. Since $j$ is not the majority number, there has to be an iteration where &lt;code&gt;count&lt;/code&gt; for $j$ becomes 0 for the first time, let’s say it happens at the end of the $k$-th iteration. As before, We define the following variables:&lt;/p&gt;
 &lt;ol&gt;
