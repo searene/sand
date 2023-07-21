@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Sand</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2023-07-22T06:13:14&#43;08:00</updated>
+    <updated>2023-07-22T06:59:59&#43;08:00</updated>
     <id>https://sand256.xyz/</id>
     <link rel="alternate" type="text/html" href="https://sand256.xyz/" />
     <link rel="self" type="application/atom&#43;xml" href="https://sand256.xyz/atom.xml" />
@@ -20,17 +20,17 @@
             <title type="text">Find the Majority Element Using the Boyer-Moore Majority Voting Algorithm</title>
             <link rel="alternate" type="text/html" href="https://sand256.xyz/posts/find-the-majority-element-using-the-boyer-moore-majority-voting-algorithm/" />
             <id>https://sand256.xyz/posts/find-the-majority-element-using-the-boyer-moore-majority-voting-algorithm/</id>
-            <updated>2023-07-21T23:00:02&#43;08:00</updated>
+            <updated>2023-07-22T06:59:13&#43;08:00</updated>
             <published>2023-07-18T07:03:22&#43;08:00</published>
             <author>
                     <name>Joey</name>
                     <uri>https://sand256.xyz/</uri>
                     <email>mycityofsky@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Introduction Recently I encountered a leetcode problem called Majority Element, there are multiple ways to solve it, the most efficient of them all is called the Boyer-Moore Majority Voting Algorithm, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give concrete mathematical proof of it.</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Introduction Recently I encountered a leetcode problem called Majority Element, there are multiple ways to solve it, the most efficient of them all is called the Boyer-Moore Majority Voting Algorithm, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give a concrete mathematical proof of it.</summary>
             
                 <content type="html">&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Recently I encountered a leetcode problem called &lt;a href=&#34;https://leetcode.com/problems/majority-element/description/&#34;&gt;Majority Element&lt;/a&gt;, there are multiple ways to solve it, the most efficient of them all is called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.&lt;/p&gt;
+&lt;p&gt;Recently I encountered a leetcode problem called &lt;a href=&#34;https://leetcode.com/problems/majority-element/description/&#34;&gt;Majority Element&lt;/a&gt;, there are multiple ways to solve it, the most efficient of them all is called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give a concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.&lt;/p&gt;
 &lt;h1 id=&#34;problem&#34;&gt;Problem&lt;/h1&gt;
 &lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; of size $n$, return the majority element.&lt;/p&gt;
 &lt;p&gt;The majority element is the element that appears more than &lt;code&gt;⌊n / 2⌋&lt;/code&gt; times. You may assume that the majority element always exists in the array.&lt;/p&gt;
@@ -169,7 +169,7 @@
 &lt;p&gt;To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a &amp;gt; \frac{k}{2}$, then &lt;code&gt;count&lt;/code&gt; would be greater than 0 at the end of the $k$-th iteration. Also, notice that we have $2c &amp;gt; n$ by the definition of $m$. Now we have two equations, let&amp;rsquo;s write them here:&lt;/p&gt;
 &lt;p&gt;$$a \le \frac{k}{2}$$&lt;/p&gt;
 &lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
-&lt;p&gt;Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add this equation to $2c &amp;gt;n$, after that we get&lt;/p&gt;
+&lt;p&gt;Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add it to $2c &amp;gt;n$, after that we get&lt;/p&gt;
 &lt;p&gt;$$2c - 2a &amp;gt; n - k$$&lt;/p&gt;
 &lt;p&gt;That is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2 \cdot (c - a) &amp;gt; n - k$$&lt;/p&gt;

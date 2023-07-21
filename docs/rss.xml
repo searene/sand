@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sat, 22 Jul 2023 06:13:14 &#43;0800</lastBuildDate>
+        <lastBuildDate>Sat, 22 Jul 2023 06:59:59 &#43;0800</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://sand256.xyz/rss.xml" />
         
@@ -39,7 +39,7 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
                 
                     <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Recently I encountered a leetcode problem called &lt;a href=&#34;https://leetcode.com/problems/majority-element/description/&#34;&gt;Majority Element&lt;/a&gt;, there are multiple ways to solve it, the most efficient of them all is called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.&lt;/p&gt;
+&lt;p&gt;Recently I encountered a leetcode problem called &lt;a href=&#34;https://leetcode.com/problems/majority-element/description/&#34;&gt;Majority Element&lt;/a&gt;, there are multiple ways to solve it, the most efficient of them all is called &lt;strong&gt;the Boyer-Moore Majority Voting Algorithm&lt;/strong&gt;, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don&amp;rsquo;t give a concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.&lt;/p&gt;
 &lt;h1 id=&#34;problem&#34;&gt;Problem&lt;/h1&gt;
 &lt;p&gt;Given an array &lt;code&gt;nums&lt;/code&gt; of size $n$, return the majority element.&lt;/p&gt;
 &lt;p&gt;The majority element is the element that appears more than &lt;code&gt;⌊n / 2⌋&lt;/code&gt; times. You may assume that the majority element always exists in the array.&lt;/p&gt;
@@ -178,7 +178,7 @@
 &lt;p&gt;To prove the equation, we first need to know that $a \le \frac{k}{2}$, because if $a &amp;gt; \frac{k}{2}$, then &lt;code&gt;count&lt;/code&gt; would be greater than 0 at the end of the $k$-th iteration. Also, notice that we have $2c &amp;gt; n$ by the definition of $m$. Now we have two equations, let&amp;rsquo;s write them here:&lt;/p&gt;
 &lt;p&gt;$$a \le \frac{k}{2}$$&lt;/p&gt;
 &lt;p&gt;$$2c &amp;gt; n$$&lt;/p&gt;
-&lt;p&gt;Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add this equation to $2c &amp;gt;n$, after that we get&lt;/p&gt;
+&lt;p&gt;Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add it to $2c &amp;gt;n$, after that we get&lt;/p&gt;
 &lt;p&gt;$$2c - 2a &amp;gt; n - k$$&lt;/p&gt;
 &lt;p&gt;That is equivalent to&lt;/p&gt;
 &lt;p&gt;$$2 \cdot (c - a) &amp;gt; n - k$$&lt;/p&gt;

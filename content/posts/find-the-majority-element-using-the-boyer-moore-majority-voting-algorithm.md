@@ -5,7 +5,7 @@ date: 2023-07-18T07:03:22+08:00
 
 # Introduction
 
-Recently I encountered a leetcode problem called [Majority Element](https://leetcode.com/problems/majority-element/description/), there are multiple ways to solve it, the most efficient of them all is called **the Boyer-Moore Majority Voting Algorithm**, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don't give concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.
+Recently I encountered a leetcode problem called [Majority Element](https://leetcode.com/problems/majority-element/description/), there are multiple ways to solve it, the most efficient of them all is called **the Boyer-Moore Majority Voting Algorithm**, whose time complexity is $O(n)$ and space complexity is $O(1)$. There are many posts online talking about the algorithm, but most of them don't give a concrete mathematical proof of it. So in this post, I try to explain the algorithm thoroughly, including not only its mechanism and intuition but also a mathematical proof.
 
 # Problem
 
@@ -142,7 +142,7 @@ $$a \le \frac{k}{2}$$
 
 $$2c > n$$
 
-Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add this equation to $2c >n$, after that we get
+Multiply both sides of the first equation by $-2$ we get $-2a \ge -k$, then we add it to $2c >n$, after that we get
 
 $$2c - 2a > n - k$$
 
