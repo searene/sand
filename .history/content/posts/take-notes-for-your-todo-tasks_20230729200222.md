@@ -172,11 +172,11 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 [fn:2] [[https://github.com/doomemacs/doomemacs][The Doom Emacs git repository]]
 ```
 
-Here is how it looks like in Emacs (You may get a different rendering effect depending on your Emacs configurations):
+Here is the rendering effect (You may get a different rendering depending on your Emacs configurations):
 
 ![Org Mode rendering](/images/org-mode-rendering.png)
 
-It's just like Markdown, only using a different set of symbols. I won't try to tell you all the meanings of those symbols, but you can guess. Here we created a top TODO task, which is to *install Emacs on macOS*. When we add this TODO task, we may know nothing about how to do that. After some investigations, we may find that we need to install two parts, the first is vanilla Emacs, and the second is Doom Emacs. Again, you don't need to know what they are, the point is that we figured out we need to install two parts, so we need to create two sub-tasks under the main task. Then we list all the commands we need to run to install them. We can also attach the result to the notes (By the way, Emacs can run those commands directly in the notes!) so that whenever any error occurs, the result can be taken as a good reference for pinpointing the reason.
+It's just like Markdown, only using a different set of symbols. I won't try to tell you all the meanings of those symbols, but you can guess. Here we created a top TODO task, which is to install `Emacs` in macOS. When we added this TODO task, we may know nothing about how to do that. After some investigations, we may find that we need to install two parts, the first is vanilla Emacs, and the second is Doom Emacs. Again, you don't need to know what they are, the point is that we figured out we need to install two parts, so we created two sub-tasks under the main task. Then we list all the commands we need to run to install them. We can also attach the result to the notes (By the way, Emacs can run those commands directly in the notes!) so that whenever any error occurs, the result can be taken as a good reference for pinpointing the reason.
 
 In the end, when we finished the first sub-task, we change the `TODO` keyword to `DONE`, just like we change `- [ ]` to `- [X]` in Markdown. It not only removes the TODO task from the TODO list but also gives us "a dose of dopamine" for finishing the task.
 

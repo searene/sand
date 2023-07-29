@@ -100,7 +100,7 @@ Now you know why TODO notes are important and how to take them, the next questio
 
 1. **It has to support adding notes for each TODO task.** Since we are talking about notes, this feature is an obvious one.
 2. **The notes should support text formatting like italics, code blocks, etc.** This is because our notes could be complicated sometimes. We may need to write code blocks, headers, quotes, etc in the notes to make it easy to understand. It would be hard to take long notes without the feature.
-3. **The whole TODO list should be stored in, or at least can be imported and exported to, a plain text format**. By plain text format, I mean Markdown, Org Mode, etc. They are powerful enough to store multiple formats in a single text file. To be honest, this is not a must-have feature, but it's nice to have. When your TODO list is stored in a plain text format, you can search for/edit anything you want with any editor, you will not be bound to a certain vendor product.
+3. **The whole TODO list should be stored in, or at least can be imported and exported to - a plain text format**. By plain text format, I mean Markdown, Org Mode, etc. They are powerful enough to store multiple formats in a single text file. To be honest, this is not a must-have feature, but it's nice to have it. When your TODO list is stored in a plain text format, you can search for/edit anything you want with any editor, you will not be bound to a certain vendor product.
 
 # How Does Each TODO App Do in Terms of Note-Taking?
 
@@ -140,7 +140,7 @@ Score: ★★★★☆
 
 This is my favorite one. But a lot of people don't know Emacs or Org Mode at all, maybe because it's a niche product mainly used by programmers.
 
-First of all, Emacs and Org Mode are two separate things. Emacs is a highly-customizable text editor, just like Vim, while Org Mode is a markup language, just like Markdown. It's not as popular as Markdown so a lot of people don't know it. Theoretically, you can edit Org Mode documents with any editor, but most people choose Emacs because it has excellent support for Org Mode.
+First of all, Emacs and Org Mode are two separate things. Emacs is a highly-customizable text editor, just like Vim. While Org Mode is a markup language, just like Markdown. It's not as popular as Markdown so a lot of people don't know it. Theoretically, you can edit Org Mode documents with any editor, but most people choose Emacs because it has excellent support for Org Mode.
 
 Org Mode has many attractive features that are not available in Markdown. Since we are talking about notes and TODO tasks, I'll only highlight relevant features in Org Mode. In Markdown, we add a header with `#`. That's similar in Org Mode, only that we use `*` instead of `#`. Moreover, You can add the `TODO` keyword after `*` in Org Mode to make it a TODO header, here is an example:
 
@@ -172,11 +172,11 @@ git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
 [fn:2] [[https://github.com/doomemacs/doomemacs][The Doom Emacs git repository]]
 ```
 
-Here is how it looks like in Emacs (You may get a different rendering effect depending on your Emacs configurations):
+Here is the rendering effect (You may get a different rendering depending on your Emacs configurations):
 
 ![Org Mode rendering](/images/org-mode-rendering.png)
 
-It's just like Markdown, only using a different set of symbols. I won't try to tell you all the meanings of those symbols, but you can guess. Here we created a top TODO task, which is to *install Emacs on macOS*. When we add this TODO task, we may know nothing about how to do that. After some investigations, we may find that we need to install two parts, the first is vanilla Emacs, and the second is Doom Emacs. Again, you don't need to know what they are, the point is that we figured out we need to install two parts, so we need to create two sub-tasks under the main task. Then we list all the commands we need to run to install them. We can also attach the result to the notes (By the way, Emacs can run those commands directly in the notes!) so that whenever any error occurs, the result can be taken as a good reference for pinpointing the reason.
+It's just like Markdown, only using a different set of symbols. I won't try to tell you all the meanings of those symbols, but you can guess. Here we created a top TODO task, which is to install `Emacs` in macOS. When we added this TODO task, we may know nothing about how to do that. After some investigations, we may find that we need to install two parts, the first is vanilla Emacs, and the second is Doom Emacs. Again, you don't need to know what they are, the point is that we figured out we need to install two parts, so we created two sub-tasks under the main task. Then we list all the commands we need to run to install them. We can also attach the result to the notes (By the way, Emacs can run those commands directly in the notes!) so that whenever any error occurs, the result can be taken as a good reference for pinpointing the reason.
 
 In the end, when we finished the first sub-task, we change the `TODO` keyword to `DONE`, just like we change `- [ ]` to `- [X]` in Markdown. It not only removes the TODO task from the TODO list but also gives us "a dose of dopamine" for finishing the task.
 
